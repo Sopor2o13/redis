@@ -90,9 +90,7 @@ aeEventLoop *aeCreateEventLoop(int setsize) {
     for (i = 0; i < setsize; i++)
         eventLoop->events[i].mask = AE_NONE;
     return eventLoop;
-/**
-test push
-**/
+
 err:
     if (eventLoop) {
         zfree(eventLoop->events);
